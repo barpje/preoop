@@ -1,0 +1,18 @@
+
+I tossed 1 EUR and got:
+heads
+heads
+tails
+I put my coin to the moneybox.
+I tossed 2 EUR and got:
+heads
+I put my coin to the moneybox.
+
+My moneybox has 3 EUR in total.
+
+++++++++++++++++++++++++++++++
+
+Moneybox is full...
+Moneybox is full...
+
+My moneybox has 24 EUR in total.
