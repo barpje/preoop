@@ -1,0 +1,17 @@
+
+Total amount of EUR in all created nodes: 23
+
+++++++++++++++++++++
+Coin value: 2EUR, heads
+Coin value: 2EUR, heads
+Coin value: 2EUR, tails
+Coin value: 2EUR, heads
+Coin value: 2EUR, heads
+Coin value: 2EUR, heads
+Coin value: 2EUR, heads
+Coin value: 2EUR, heads
+Coin value: 2EUR, tails
+Coin value: 2EUR, tails
+Coin value: 2EUR, tails
+Coin value: 1EUR, heads
+
