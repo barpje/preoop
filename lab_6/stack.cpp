@@ -1,6 +1,4 @@
 #include "stack.h"
-#include "node.h"
-#include "coin.h"
 #include <iostream>
 
 using namespace std; 
