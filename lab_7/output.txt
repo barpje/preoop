@@ -1,0 +1,8 @@
+ToyotaDealer: No place for more cars.
+
+model: RAV4, year: 2019, mileage: 3, price: 28000
+
+ToyotaDealer: no such car.
+LarussoAutos income: 46000
+ToyotaMotors income: 49400
+All dealers total income: 95400
