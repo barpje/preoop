@@ -13,17 +13,17 @@ typedef struct Robot{
     PositionXY poz;
 }Robot;
 ///funkcja odpowiadajaca za "odzywanie sie robota"
-void Speak(Robot *p){
-    if(p->name==NULL) 
+void Speak(const Robot *p){
+    if(p==nullptr) 
         printf("No such robot \n");
     else printf("Hi, I'm robot %s standing at x= %d y= %d \n",p->name,p->poz.x,p->poz.y);   
 }
 
 int count=0;
-Robot *lista[5];
+Robot *lista[5] = {nullptr};
 
 ///funkcja poruszajaca robotem po osi x
-void ShiftX(Robot *a, int val){
+void ShiftX(Robot* a, int val){
 int temp=0;
 for(int i=0;i<count;i++){
     if(lista[i]->poz.x==a->poz.x+val && lista[i]->poz.y==a->poz.y){
@@ -68,7 +68,8 @@ return 1;
 typedef void(*Operation)(Robot *p,int x);
 ///funkcja tworzaca robota 
 Robot *CreateRobot(PositionXY k){
-    Robot *nowy=(Robot*) malloc(sizeof( Robot));
+   // Robot *nowy=(Robot*) malloc(sizeof( Robot));
+   Robot *nowy = new Robot;
     nowy->name="noname";
     nowy->poz.x=k.x;
     nowy->poz.y=k.y;
@@ -77,13 +78,13 @@ Robot *CreateRobot(PositionXY k){
         count++;
         return nowy;
     } else {
-            free(nowy);
-            return nowy;
+            delete nowy;
+            return nullptr;
     }
 }    
 
 Robot *CreateRobot(const char *n, PositionXY k){
-    Robot *nowy=(Robot*) malloc(sizeof( Robot));
+    Robot *nowy=new Robot;
     nowy->name=n;
     nowy->poz.x=k.x;
     nowy->poz.y=k.y;
@@ -92,15 +93,17 @@ Robot *CreateRobot(const char *n, PositionXY k){
         count++;
         return nowy;
     } else {
-            free(nowy);
-            return nowy;
+            delete nowy;
+            return nullptr;
     }
 }  
 
 ///funkcja usuwajaca roboty
 void RemoveRobots(){
-    for(int j=0;j<5;j++)
-        delete(lista[j]);
+    for(int j=0;j<count;j++){
+	    if(lista[j]!=nullptr)
+		    delete lista[j];
+    }
 }
 
 #endif
